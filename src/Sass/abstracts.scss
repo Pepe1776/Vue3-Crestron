@@ -1,0 +1,23 @@
+$darkest: #0b090a;
+$darker: #161a1d;
+$dark: #660708;
+$primaryd: #a4161a;
+$primary: #ba181b;
+$primaryl: #e5383b;
+$gray: #b1a1a6;
+$light: #d3d3d3;
+$lighter: #f5f3f4;
+$lightest: #ffffff;
+
+// Mixins
+@mixin center {
+    display: flex;
+    justify-content: center;
+}
+
+.primary {
+    color: $primary;
+}
+.lightest {
+    color: $lightest;
+}
