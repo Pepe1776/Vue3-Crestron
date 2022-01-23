@@ -6,85 +6,79 @@
       >Sources</MenuButton
     >
     <transition name="fade">
-    <MenuItems
-      id="menu-i"
-      class="shadow-2xl outline-black grid grid-rows-3 grid-flow-col gap-x-10 gap-y-20"
-    >
-      <MenuItem v-slot="{}">
-        <a
-          id="menu"
-          class="shadow-2xl text-6xl dark:text-white active:text-black text-red-700 font-bold py-2 px-4 rounded"
-          href="/account-settings"
-        >
-          Watch Direct Tv
-        </a>
-      </MenuItem>
-      <MenuItem v-slot="{}">
-        <a
-          id="menu"
-          class="dark:text-white shadow-2xl text-6xl active:text-black text-red-700 font-bold py-2 px-4 rounded"
-          href="/account-settings"
-        >
-          Listen Direct Tv
-        </a>
-      </MenuItem>
-      <MenuItem>
-        <span
-          class="dark:text-white shadow-2xl text-6xl active:text-black text-red-700 font-bold py-2 px-4 rounded"
-          >Lighting</span
-        >
-      </MenuItem>
-      <MenuItem v-slot="{}">
-        <a
-          id="menu"
-          class="dark:text-white shadow-2xl text-6xl active:text-black text-red-700 font-bold py-2 px-4 rounded"
-          href="/account-settings"
-        >
-          Watch Apple Tv
-        </a>
-      </MenuItem>
-      <MenuItem v-slot="{}">
-        <a
-          id="menu"
-          class="dark:text-white shadow-2xl text-6xl active:text-black text-red-700 font-bold py-2 px-4 rounded"
-          href="/account-settings"
-        >
-          Listen Apple Tv
-        </a>
-      </MenuItem>
-      <MenuItem>
-        <span
-          id="menu"
-          class="dark:text-white shadow-2xl text-6xl active:text-black text-red-700 font-bold py-2 px-4 rounded"
-          >Shades</span
-        >
-      </MenuItem>
-      <MenuItem v-slot="{}">
-        <a
-          id="menu"
-          class="dark:text-white shadow-2xl text-6xl active:text-black text-red-700 font-bold py-2 px-4 rounded"
-          href="/account-settings"
-        >
-          Watch BlueRay
-        </a>
-      </MenuItem>
-      <MenuItem v-slot="{}">
-        <a
-          id="menu"
-          class="dark:text-white shadow-2xl text-6xl active:text-black text-red-700 font-bold py-2 px-4 rounded"
-          href="/account-settings"
-        >
-          Listen Airplay
-        </a>
-      </MenuItem>
-      <MenuItem>
-        <span
-          id="menu"
-          class="dark:text-white shadow-2xl text-6xl active:text-black text-red-700 font-bold py-2 px-4 rounded"
-          >Climate</span
-        >
-      </MenuItem>
-    </MenuItems>
+      <MenuItems
+        id="menu-i"
+        class="shadow-2xl outline-black grid grid-rows-3 grid-flow-col gap-x-10 gap-y-20"
+      >
+        <MenuItem v-slot="{}">
+          <a
+            id="menu"
+            class="shadow-2xl text-6xl dark:text-white active:text-black text-red-700 font-bold py-2 px-4 rounded"
+            href="/account-settings"
+            >Watch Direct Tv</a
+          >
+        </MenuItem>
+        <MenuItem v-slot="{}">
+          <a
+            id="menu"
+            class="dark:text-white shadow-2xl text-6xl active:text-black text-red-700 font-bold py-2 px-4 rounded"
+            href="/account-settings"
+            >Listen Direct Tv</a
+          >
+        </MenuItem>
+        <MenuItem>
+          <span
+            class="dark:text-white shadow-2xl text-6xl active:text-black text-red-700 font-bold py-2 px-4 rounded"
+            >Lighting</span
+          >
+        </MenuItem>
+        <MenuItem v-slot="{}">
+          <a
+            id="menu"
+            class="dark:text-white shadow-2xl text-6xl active:text-black text-red-700 font-bold py-2 px-4 rounded"
+            href="/account-settings"
+            >Watch Apple Tv</a
+          >
+        </MenuItem>
+        <MenuItem v-slot="{}">
+          <a
+            id="menu"
+            class="dark:text-white shadow-2xl text-6xl active:text-black text-red-700 font-bold py-2 px-4 rounded"
+            href="/account-settings"
+            >Listen Apple Tv</a
+          >
+        </MenuItem>
+        <MenuItem>
+          <span
+            id="menu"
+            class="dark:text-white shadow-2xl text-6xl active:text-black text-red-700 font-bold py-2 px-4 rounded"
+            >Shades</span
+          >
+        </MenuItem>
+        <MenuItem v-slot="{}">
+          <a
+            id="menu"
+            class="dark:text-white shadow-2xl text-6xl active:text-black text-red-700 font-bold py-2 px-4 rounded"
+            href="/account-settings"
+            >Watch BlueRay</a
+          >
+        </MenuItem>
+        <MenuItem v-slot="{}">
+          <a
+            id="menu"
+            class="dark:text-white shadow-2xl text-6xl active:text-black text-red-700 font-bold py-2 px-4 rounded"
+            href="/account-settings"
+            >Listen Airplay</a
+          >
+        </MenuItem>
+        <MenuItem>
+          <span
+            id="menu"
+            class="dark:text-white shadow-2xl text-6xl active:text-black text-red-700 font-bold py-2 px-4 rounded"
+            >Climate</span
+          >
+        </MenuItem>
+      </MenuItems>
     </transition>
   </Menu>
 </template>
