@@ -1,13 +1,13 @@
 <script>
-import SourceBar from "../components/SouceBar.vue";
+import MenuBackyard from "../components/MenuBackyard.vue";
 export default {
-  components: { SourceBar },
+  components: { MenuBackyard },
 };
 </script>
 
 <template>
   <div class="backyard">
-    <h1>Backyard</h1>
-    <SourceBar />
+    <h1 class="text-9xl shadow-lg shadow-red-500/50>Family">Backyard</h1>
+    <MenuBackyard />
   </div>
 </template>

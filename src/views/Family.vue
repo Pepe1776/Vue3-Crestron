@@ -1,13 +1,13 @@
 <script>
-import SourceBar from "../components/SouceBar.vue";
+import MenuFamily from "../components/MenuFamily.vue";
 export default {
-  components: { SourceBar },
+  components: { MenuFamily },
 };
 </script>
 
 <template>
   <div class="Family">
-    <h1>Family</h1>
-    <SourceBar />
+    <h1 class="text-9xl shadow-lg shadow-red-500/50>Family">Family</h1>
+    <MenuFamily />
   </div>
 </template>

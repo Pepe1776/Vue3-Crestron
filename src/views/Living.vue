@@ -1,14 +1,14 @@
 <script>
-import Menu from "../components/Menu.vue";
+import MenuLiving from "../components/MenuLiving.vue";
 export default {
-  components: { Menu },
+  components: { MenuLiving },
 };
 </script>
 
 <template>
   <h1 class="text-9xl shadow-lg shadow-red-500/50">Living Room</h1>
   <router-view />
-  <Menu />
+  <MenuLiving />
 </template>
 
 <style lang="scss">

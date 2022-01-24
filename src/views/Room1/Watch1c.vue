@@ -1,6 +1,6 @@
 <template>
   <div class="Shades1">
-    <h1>Lighting Controls</h1>
+    <h1>blueray Controls</h1>
   </div>
 </template>
 <script>

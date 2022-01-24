@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <H1>Home</H1>
+    <h1 class="text-9xl shadow-lg shadow-red-500/50>Family">Home</h1>
     <!-- <weather /> -->
   </div>
 </template>

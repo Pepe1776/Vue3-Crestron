@@ -103,4 +103,9 @@ nav a .router-link:active {
   transform: scale(1.2);
   transition: transform 0.2s ease-in-out;
 }
+@media screen and (max-width: 850px) {
+  header nav .nav-link {
+    font-size: 1.8rem;
+  }
+}
 </style>
