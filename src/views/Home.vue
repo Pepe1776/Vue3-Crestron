@@ -1,7 +1,8 @@
 <template>
   <div class="home">
     <h1 class="text-9xl shadow-lg shadow-red-500/50>Family">
-      Home <Icon class="icon" inline="true" width="5rem" icon="mdi-light:home" />
+      Home
+      <Icon class="icon" inline="true" width="5rem" icon="mdi-light:home" />
     </h1>
     <!-- <weather /> -->
   </div>
@@ -24,6 +25,6 @@ export default {
 .icon {
   position: absolute;
   margin-top: -6.4rem;
-  margin-left: 55rem;
+  margin-left: 1rem;
 }
 </style>
