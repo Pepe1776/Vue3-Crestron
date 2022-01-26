@@ -15,71 +15,90 @@
             id="menu"
             class="shadow-2xl text-4xl md:text-3xl lg:text-6xl dark:text-white active:text-black text-red-700 font-bold py-2 px-4 rounded"
             href="/Watch1"
-            >Watch Direct Tv</a
-          >
+            >Watch<img
+              class="direct"
+              src="../assets/380px-Direct_tv_channel.svg.png"
+            />
+          </a>
         </MenuItem>
         <MenuItem v-slot="{}">
           <a
             id="menu"
             class="dark:text-white shadow-2xl text-2xl md:text-3xl lg:text-6xl active:text-black text-red-700 font-bold py-2 px-4 rounded"
             href="/Listen1"
-            >Listen Direct Tv</a
-          >
+            >Listen<img
+              class="direct"
+              src="../assets/380px-Direct_tv_channel.svg.png"
+            />
+          </a>
         </MenuItem>
         <MenuItem>
           <a
             id="menu"
             class="dark:text-white shadow-2xl text-2xl md:text-3xl lg:text-6xl active:text-black text-red-700 font-bold py-2 px-4 rounded"
             href="/Lighting1"
-            >Lighting</a
-          >
+            >Lighting<Icon
+              class="bulb"
+              inline="false"
+              width="7rem"
+              icon="noto:light-bulb"
+            />
+          </a>
         </MenuItem>
         <MenuItem v-slot="{}">
           <a
             id="menu"
             class="dark:text-white shadow-2xl text-2xl md:text-3xl lg:text-6xl active:text-black text-red-700 font-bold py-2 px-4 rounded"
             href="/Watch1b"
-            >Watch Apple Tv</a
-          >
+            >Watch
+            <img src="../assets/apple-tv.svg" class="apple" />
+          </a>
         </MenuItem>
         <MenuItem v-slot="{}">
           <a
             id="menu"
             class="dark:text-white shadow-2xl text-2xl md:text-3xl lg:text-6xl active:text-black text-red-700 font-bold py-2 px-4 rounded"
             href="/Listen1b"
-            >Listen Apple Tv</a
-          >
+            >Listen<img src="../assets/apple-tv.svg" class="apple" />
+          </a>
         </MenuItem>
         <MenuItem>
           <a
             id="menu"
             class="dark:text-white shadow-2xl text-2xl md:text-3xl lg:text-6xl active:text-black text-red-700 font-bold py-2 px-4 rounded"
             href="/Shades1"
-            >Shades</a
-          >
+            >Shades<Icon class="shade" width="7rem" icon="si-glyph:curtain"
+          /></a>
         </MenuItem>
         <MenuItem v-slot="{}">
           <a
             id="menu"
             class="dark:text-white shadow-2xl text-2xl md:text-3xl lg:text-6xl active:text-black text-red-700 font-bold py-2 px-4 rounded"
             href="/Watch1c"
-            >Watch BlueRay</a
-          >
+            >Watch BlueRay<img
+              class="blueray"
+              src="../assets/Blu_ray_logo.png"
+            />
+          </a>
         </MenuItem>
         <MenuItem v-slot="{}">
           <a
             id="menu"
             class="dark:text-white shadow-2xl text-2xl md:text-3xl lg:text-6xl active:text-black text-red-700 font-bold py-2 px-4 rounded"
             href="/Listen1c"
-            >Listen Airplay</a
-          >
+            >Listen Airplay<Icon
+              class="air"
+              width="9rem"
+              icon="simple-icons:airplayaudio"
+            />
+          </a>
         </MenuItem>
         <MenuItem>
           <a
             id="menu"
             class="dark:text-white shadow-2xl text-2xl md:text-3xl lg:text-6xl active:text-black text-red-700 font-bold py-2 px-4 rounded"
             href="/Hvac1"
-            >Climate</a
+            >Climate<Icon class="hvac" width="8rem" icon="mdi:air-conditioner" /></a
           >
         </MenuItem>
       </MenuItems>
@@ -88,6 +107,7 @@
 </template>
 
 <script>
+import { Icon } from "@iconify/vue";
 import { Menu, MenuButton, MenuItems, MenuItem } from "@headlessui/vue";
 
 export default {
@@ -96,6 +116,7 @@ export default {
     MenuButton,
     MenuItems,
     MenuItem,
+    Icon,
   },
   props: ["mode"],
 };
@@ -103,30 +124,36 @@ export default {
 
 <style type="scss">
 @import "../Sass/abstracts.scss";
+* {
+  margin: 0;
+  padding: 0;
+}
 
 #menu-b {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  margin-bottom: 10%;
-  margin-left: 39%;
+  top: 0;
+  right: 0;
+  margin-top: 1%;
+  margin-right: 1%;
+  /* margin-bottom: 10%; */
+  /* margin-left: 39%; */
 }
 #menu-i {
-  margin-top: 5%;
+  margin-top: 2%;
 }
 .dark #menu-b {
   background-color: #000;
-  border: 2px solid red;
+  border: 2px solid rgb(0, 255, 255);
   color: white;
 }
 .dark #menu-i {
   background-color: #000;
-  border: 2px solid red;
+  /* border: 2px solid red; */
   /* transition: 0.4s; */
 }
 .dark #menu {
   background-color: #000;
-  border: 2px solid red;
+  /* border: 2px solid red; */
   color: white;
 }
 .fade-enter-active {
@@ -149,6 +176,43 @@ export default {
 .fade-enter-to {
   opacity: 1;
 }
+
+/* Icons */
+
+.direct {
+  width: 40%;
+  margin-left: 31%;
+  margin-top: 4%;
+}
+.apple {
+  width: 35%;
+  margin-left: 32.5%;
+  margin-top: 4%;
+}
+.bulb {
+  margin-left: 37%;
+  margin-top: 4%;
+}
+.shade {
+  margin-left: 37.5%;
+  margin-top: 4%;
+}
+.blueray {
+  width: 50%;
+  margin-left: 23%;
+  margin-top: 4%;
+}
+.air {
+  margin-left: 33.333%;
+  margin-top: 4%;
+}
+.hvac {
+  margin-left: 35%;
+  margin-top: 4%;
+}
+
+/* media queries */
+
 @media screen and (max-width: 1000px) {
   #menu-b {
     position: absolute;

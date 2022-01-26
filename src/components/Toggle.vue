@@ -54,7 +54,7 @@ export default {
   transition: 0.4s;
 }
 input:checked + .toggler {
-  background-color: $primary;
+  background-color: rgb(0, 195, 255);
 }
 input:focus + .toggler {
   box-shadow: 0 0 2px $primaryl;

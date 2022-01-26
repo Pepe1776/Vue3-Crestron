@@ -121,7 +121,7 @@ body {
 #app {
   background-image: url("./assets/cold-bg.jpg");
   background-size: cover;
-  background-position: bottom;
+  background-position: center;
   transition: 0.4s;
   overflow: hidden;
 }
