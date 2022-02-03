@@ -98,8 +98,8 @@
             id="menu"
             class="dark:text-white shadow-2xl text-2xl md:text-3xl lg:text-6xl active:text-black text-red-700 font-bold py-2 px-4 rounded"
             href="/Hvac1"
-            >Climate<Icon class="hvac" width="8rem" icon="mdi:air-conditioner" /></a
-          >
+            >Climate<Icon class="hvac" width="8rem" icon="mdi:air-conditioner"
+          /></a>
         </MenuItem>
       </MenuItems>
     </transition>
@@ -163,7 +163,7 @@ export default {
   transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
 }
 .fade-leave-to /* .slide-fade-leave-active below version 2.1.8 */ {
-  transform: translateX(10px);
+  /* transform: translateX(10px); */
   opacity: 0;
 }
 .fade-enter-from {
