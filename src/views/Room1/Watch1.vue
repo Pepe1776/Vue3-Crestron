@@ -26,9 +26,9 @@
       <button class="col-start-4 row-start-4 ml-8">
         <Icon width="8rem" icon="akar-icons:circle" />
       </button>
-      <button class="row-start-2 col-start-2 text-7xl border-2">Guide</button>
-      <button class="row-start-2 col-start-4 text-7xl border-2">Menu</button>
-      <button class="row-start-2 col-start-6 text-7xl border-2">Fav</button>
+      <button class="row-start-2 col-start-2 text-7xl border-4">Guide</button>
+      <button class="row-start-2 col-start-4 text-7xl border-4">Menu</button>
+      <button class="row-start-2 col-start-6 text-7xl border-4">Fav</button>
       <vue3-slider
         class="col-start-1 col-end-2 row-start-3 row-end-6 text-3xl justify-self-center"
         v-model="myNumber"
@@ -59,17 +59,16 @@
       </button>
       <Popover class="relative row-start-7 col-start-7 text-5xl border-2">
         <PopoverButton>Keypad</PopoverButton>
-
+        <PopoverOverlay
+          class="bg-black"
+          :class="open ? 'opacity-30 fixed inset-0' : 'opacity-0'"
+        />
         <PopoverPanel class="absolute z-10">
-          <div class="grid grid-cols-4">
-            <a href="/analytics">Analytics</a>
-            <a href="/engagement">Engagement</a>
-            <a href="/security">Security</a>
-            <a href="/integrations">Integrations</a>
+          <div class="grid grid-cols-4 w-full h-full">
+           <button class="text-7xl">1</button>
           </div>
         </PopoverPanel>
       </Popover>
-
     </div>
   </div>
 </template>
@@ -77,7 +76,12 @@
 <script>
 import { Icon } from "@iconify/vue";
 import slider from "vue3-slider";
-import { Popover, PopoverButton, PopoverPanel } from "@headlessui/vue";
+import {
+  Popover,
+  PopoverButton,
+  PopoverPanel,
+  PopoverOverlay,
+} from "@headlessui/vue";
 export default {
   components: {
     Icon,
@@ -85,6 +89,7 @@ export default {
     Popover,
     PopoverButton,
     PopoverPanel,
+    PopoverOverlay,
   },
   methods: {
     goBack() {
