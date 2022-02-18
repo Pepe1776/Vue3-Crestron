@@ -37,20 +37,20 @@ export default {
   },
   methods: {
     onChange: function () {
-      //console.log("onChange");
-      //console.log(this.value);
-      /*this.$store.dispatch("sendAnalogSignal", {
+      console.log("onChange");
+      console.log(this.value);
+      this.$store.dispatch("sendAnalogSignal", {
         id: this.id,
         value: Number(this.value),
-      });*/
+      });
     },
     onInput: function () {
-      //console.log("onInput");
-      //console.log(this.value);
-      /*this.$store.dispatch("sendAnalogSignal", {
+      console.log("onInput");
+      console.log(this.value);
+      this.$store.dispatch("sendAnalogSignal", {
         id: this.id,
         value: Number(this.value),
-      });*/
+      });
     },
   },
 };
