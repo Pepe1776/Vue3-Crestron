@@ -11,108 +11,147 @@
   </div>
   <div class="controller grid justify-center">
     <div
-      class="controller-buttons grid grid-cols-8 gap-8 p-12 place-content-center"
+      class="controller-buttons grid grid-cols-8 grid-rows-8 gap-8 p-12 place-content-center"
     >
-      <button class="col-start-3 row-start-3 justify-self-center">
+      <Ch5button id="101" class="col-start-2 row-start-3 justify-self-center">
         <Icon icon="cil:caret-top" width="8rem" />
-      </button>
-      <button class="col-start-4 row-start-4 justify-self-center">
+      </Ch5button>
+      <Ch5button id="102" class="col-start-3 row-start-4 justify-self-center">
         <Icon icon="cil:caret-right" width="8rem" />
-      </button>
-      <button class="col-start-3 row-start-5 justify-self-center">
+      </Ch5button>
+      <Ch5button id="103" class="col-start-2 row-start-5 justify-self-center">
         <Icon icon="cil:caret-bottom" width="8rem" />
-      </button>
-      <button class="col-start-2 row-start-4 justify-self-center">
+      </Ch5button>
+      <Ch5button id="104" class="col-start-1 row-start-4 justify-self-center">
         <Icon icon="cil:caret-left" width="8rem" />
-      </button>
-      <button class="col-start-3 row-start-4 justify-self-center">
+      </Ch5button>
+      <Ch5button id="105" class="col-start-2 row-start-4 justify-self-center">
         <Icon width="8rem" icon="akar-icons:circle" />
-      </button>
-      <button class="row-start-2 col-start-1 col-end-3 text-7xl border-4">
+      </Ch5button>
+      <Ch5button
+        id="106"
+        class="row-start-2 col-start-1 col-end-3 text-7xl border-4"
+      >
         Guide
-      </button>
-      <button class="row-start-2 col-start-4 col-end-6 text-7xl border-4">
+      </Ch5button>
+      <Ch5button
+        id="107"
+        class="row-start-2 col-start-4 col-end-6 text-7xl border-4"
+      >
         Menu
-      </button>
-      <button class="row-start-2 col-start-7 col-end-9 text-7xl border-4">
+      </Ch5button>
+      <Ch5button
+        id="108"
+        class="row-start-2 col-start-7 col-end-9 text-7xl border-4"
+      >
         Fav
-      </button>
+      </Ch5button>
 
-      <vue3-slider
-        class="col-start-1 col-end-2 row-start-3 row-end-6 text-3xl justify-self-center"
-        v-model="myNumber"
-        color="rgb(0, 195, 255)"
-        track-color="#d3d3d3"
-        orientation="vertical"
-        label="Volume"
-        height="20"
-        width="20rem"
-        tooltiptext="Volume %v"
-        tooltip="true"
+      <Ch5slider
+        id="100"
+        class="col-start-7 col-end-9 row-start-1 row-end-1 text-3xl justify-self-center"
       />
 
-      <span class="row-start-5 col-start-1 text-5xl mt-10">Volume</span>
-      <button class="col-start-2 row-start-6 justify-self-center">
+      <span class="row-start-1 col-start-5 ml-20 text-7xl">Volume</span>
+      <Ch5button id="109" class="col-start-1 row-start-6 justify-self-center">
         <Icon width="7rem" icon="cil:info" />
-      </button>
-      <button class="col-start-4 row-start-6 justify-self-center border-2">
-        <Icon width="7rem" icon="fluent:video-play-pause-24-regular" />
-      </button>
-      <button class="col-start-5 row-start-3 justify-self-center">
-        <Icon width="7rem" icon="cil:arrow-thick-top" />
-      </button>
-      <span
-        class="text-5xl mr-5 col-start-5 row-start-4 text-center justify-self-center align-middle mt-10"
-        >Channel</span
+      </Ch5button>
+      <Ch5button
+        id="110"
+        class="col-start-3 row-start-6 justify-self-center border-2"
       >
-      <button class="col-start-5 row-start-5 justify-self-center">
+        <Icon width="7rem" icon="fluent:video-play-pause-24-regular" />
+      </Ch5button>
+      <Ch5button id="111" class="col-start-8 row-start-3 justify-self-center">
+        <Icon width="7rem" icon="cil:arrow-thick-top" />
+      </Ch5button>
+      <!-- <span
+        class="text-5xl col-start-8 row-start-4 row-end-5 text-center justify-self-center align-middle mt-10"
+        >Channel</span
+      > -->
+      <Ch5button id="112" class="col-start-8 row-start-6 justify-self-center">
         <Icon width="7rem" icon="cil:arrow-thick-bottom" />
-      </button>
-      <button class="text-7xl col-start-6 row-start-3 border-4 rounded-xl">
+      </Ch5button>
+      <Ch5button
+        id="113"
+        class="text-7xl col-start-5 row-start-3 border-4 rounded-xl"
+      >
         1
-      </button>
-      <button class="text-7xl col-start-7 row-start-3 border-4 rounded-xl">
+      </Ch5button>
+      <Ch5button
+        id="114"
+        class="text-7xl col-start-6 row-start-3 border-4 rounded-xl"
+      >
         2
-      </button>
-      <button class="text-7xl col-start-8 row-start-3 border-4 rounded-xl">
+      </Ch5button>
+      <Ch5button
+        id="115"
+        class="text-7xl col-start-7 row-start-3 border-4 rounded-xl"
+      >
         3
-      </button>
-      <button class="text-7xl col-start-6 row-start-4 border-4 rounded-xl">
+      </Ch5button>
+      <Ch5button
+        id="116"
+        class="text-7xl col-start-5 row-start-4 border-4 rounded-xl"
+      >
         4
-      </button>
-      <button class="text-7xl col-start-7 row-start-4 border-4 rounded-xl">
+      </Ch5button>
+      <Ch5button
+        id="117"
+        class="text-7xl col-start-6 row-start-4 border-4 rounded-xl"
+      >
         5
-      </button>
-      <button class="text-7xl col-start-8 row-start-4 border-4 rounded-xl">
+      </Ch5button>
+      <Ch5button
+        id="117"
+        class="text-7xl col-start-7 row-start-4 border-4 rounded-xl"
+      >
         6
-      </button>
-      <button class="text-7xl col-start-6 row-start-5 border-4 rounded-xl">
+      </Ch5button>
+      <Ch5button
+        id="118"
+        class="text-7xl col-start-5 row-start-5 border-4 rounded-xl"
+      >
         7
-      </button>
-      <button class="text-7xl col-start-7 row-start-5 border-4 rounded-xl">
+      </Ch5button>
+      <Ch5button
+        id="119"
+        class="text-7xl col-start-6 row-start-5 border-4 rounded-xl"
+      >
         8
-      </button>
-      <button class="text-7xl col-start-8 row-start-5 border-4 rounded-xl">
+      </Ch5button>
+      <Ch5button
+        id="120"
+        class="text-7xl col-start-7 row-start-5 border-4 rounded-xl"
+      >
         9
-      </button>
-      <button class="text-7xl col-start-6 row-start-6 border-4 rounded-xl">
+      </Ch5button>
+      <Ch5button
+        id="121"
+        class="text-7xl col-start-5 row-start-6 border-4 rounded-xl"
+      >
         _
-      </button>
-      <button class="text-7xl col-start-8 row-start-6 border-4 rounded-xl">
+      </Ch5button>
+      <Ch5button
+        id="122"
+        class="text-7xl col-start-7 row-start-6 border-4 rounded-xl"
+      >
         ent
-      </button>
+      </Ch5button>
     </div>
   </div>
 </template>
 
 <script>
 import { Icon } from "@iconify/vue";
-import slider from "vue3-slider";
+import Ch5button from "../../components/Ch5button.vue";
+import Ch5slider from "../../components/Ch5slider.vue";
 
 export default {
   components: {
+    Ch5slider,
+    Ch5button,
     Icon,
-    "vue3-slider": slider,
   },
   methods: {
     goBack() {

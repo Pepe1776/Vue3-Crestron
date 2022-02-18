@@ -1,10 +1,12 @@
 <template>
   <Menu>
-    <MenuButton
-      id="menu-b"
-      class="md:text-5xl lg:text-7xl animate-pulse shadow-2xl outline-black text-4xl active:text-black text-red-700 font-bold py-2 px-4 rounded"
-      >Sources</MenuButton
-    >
+    <div class="h-full w-full">
+      <MenuButton
+        id="source"
+        class="mt-20 md:text-5xl lg:text-9xl animate-pulse shadow-2xl outline-white text-4xl active:text-black text-red-700 font-bold rounded"
+        >Sources</MenuButton
+      >
+    </div>
     <transition name="fade">
       <MenuItems
         id="menu-i"
@@ -130,16 +132,18 @@ export default {
 }
 
 #menu-b {
-  position: absolute;
+  /* position: absolute;
   top: 0;
   right: 0;
   margin-top: 1%;
-  margin-right: 1%;
+  margin-right: 30%;
+  height: 10%;
+  width: 20%; */
   /* margin-bottom: 10%; */
-  /* margin-left: 39%; */
 }
 #menu-i {
-  margin-top: 2%;
+  position: absolute;
+  top: 7%;
 }
 .dark #menu-b {
   background-color: #000;
@@ -214,10 +218,10 @@ export default {
 /* media queries */
 
 @media screen and (max-width: 1000px) {
-  #menu-b {
+  /* #menu-b {
     position: absolute;
     margin-left: 80%;
     margin-bottom: 39%;
-  }
+  } */
 }
 </style>

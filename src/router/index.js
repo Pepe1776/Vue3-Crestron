@@ -1,5 +1,13 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Home from "../views/Home.vue";
+import Living from "../views/Living.vue";
+import Family from "../views/Family.vue";
+import Bedroom from "../views/Bedroom.vue";
+import Backyard from "../views/Backyard.vue";
+// Rooms start Here
+import Watch1 from "../views/Room1/Watch1.vue";
+import Watch1b from "../views/Room1/Watch1b.vue";
+import Watch1c from "../views/Room1/Watch1c.vue";
 
 const routes = [
   {
@@ -10,66 +18,40 @@ const routes = [
   {
     path: "/living",
     name: "Living",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/Living.vue"),
+    component: Living,
   },
   {
     path: "/family",
     name: "Family",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/Family.vue"),
+    component: Family,
   },
   {
     path: "/bedroom",
     name: "Bedroom",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/Bedroom.vue"),
+    component: Bedroom,
   },
   {
     path: "/backyard",
     name: "Backyard",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/Backyard.vue"),
+    component: Backyard,
   },
+
   // Rooms Start Here!!!
+
   {
     path: "/Watch1",
     name: "Watch1",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/Room1/Watch1.vue"),
+    component: Watch1,
   },
   {
     path: "/Watch1b",
     name: "Watch1b",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/Room1/Watch1b.vue"),
+    component: Watch1b,
   },
   {
     path: "/Watch1c",
     name: "Watch1c",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/Room1/Watch1c.vue"),
+    component: Watch1c,
   },
   {
     path: "/Listen1",

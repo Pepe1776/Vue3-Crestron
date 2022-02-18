@@ -17,10 +17,11 @@
 export default {
   name: "CrestronButton",
   props: {
-    id: Number,
+    id: String,
   },
   computed: {
     feedback: function () {
+      console.log("feedback");
       return this.$store.state.dRxSignals[this.id];
     },
     touchDevice: function () {
@@ -29,9 +30,11 @@ export default {
   },
   methods: {
     buttonPressed: function () {
+      console.log("buttonPressed", this.id);
       this.$store.dispatch("sendDigitalSignalHigh", this.id);
     },
     buttonReleased: function () {
+      console.log("buttonReleased", this.id);
       this.$store.dispatch("sendDigitalSignalLow", this.id);
     },
     mousedown: function () {
