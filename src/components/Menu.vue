@@ -116,17 +116,17 @@ export default {
 }
 .dark #menu-b {
   background-color: #000;
-  border: 2px solid red;
+ 
   color: white;
 }
 .dark #menu-i {
   background-color: #000;
-  border: 2px solid red;
+  
   /* transition: 0.4s; */
 }
 .dark #menu {
   background-color: #000;
-  border: 2px solid red;
+
   color: white;
 }
 .fade-enter-active {

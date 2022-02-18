@@ -3,14 +3,14 @@
     <div class="h-full w-full">
       <MenuButton
         id="source"
-        class="mt-20 md:text-5xl lg:text-9xl animate-pulse shadow-2xl outline-white text-4xl active:text-black text-red-700 font-bold rounded"
+        class="mt-20 md:text-5xl lg:text-9xl animate-pulse shadow-2xl border-2 border-blue-300 text-4xl active:text-black text-blue-300 font-bold rounded"
         >Sources</MenuButton
       >
     </div>
     <transition name="fade">
       <MenuItems
         id="menu-i"
-        class="shadow-2xl outline-black grid grid-rows-3 grid-flow-col gap-x-10 gap-y-20"
+        class="shadow-2xl border-white outline-4 grid grid-rows-3 grid-flow-col gap-x-10 gap-y-20"
       >
         <MenuItem v-slot="{}">
           <a
@@ -150,9 +150,11 @@ export default {
   border: 2px solid rgb(0, 255, 255);
   color: white;
 }
+#menu-i {
+  background-color: #fff;
+}
 .dark #menu-i {
   background-color: #000;
-  /* border: 2px solid red; */
   /* transition: 0.4s; */
 }
 .dark #menu {
