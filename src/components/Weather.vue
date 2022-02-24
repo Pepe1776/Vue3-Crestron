@@ -2,7 +2,7 @@
   <div
     id="app"
     :class="
-      typeof weather.main != 'undefined' && weather.main.temp > 16 ? 'warm' : ''
+      typeof weather.main != 'undefined' && weather.main.temp < 45 ? 'cold' : ''
     "
   >
     <main>
@@ -11,7 +11,7 @@
       <div class="search-box">
         <input
           type="text"
-          class="search-bar"
+          class="search-bar text-black"
           placeholder="Cari..."
           v-model="query"
           @keypress="fetchWeather"
@@ -119,15 +119,15 @@ body {
 }
 
 #app {
-  background-image: url("./assets/cold-bg.jpg");
+  background-image: url("./assets/gautier-salles-uffQnKuJ-hc-unsplash.jpg");
   background-size: cover;
   background-position: center;
   transition: 0.4s;
   overflow: hidden;
 }
-
-#app.warm {
-  background-image: url("./assets/warm-bg.jpg");
+/*  */
+#app.cold {
+  background-image: url("./assets/antonio-fadel-CkkXSfYir84-unsplash.jpg");
 }
 
 main {

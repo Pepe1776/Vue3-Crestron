@@ -116,12 +116,12 @@ export default {
 }
 .dark #menu-b {
   background-color: #000;
- 
+
   color: white;
 }
 .dark #menu-i {
   background-color: #000;
-  
+
   /* transition: 0.4s; */
 }
 .dark #menu {
