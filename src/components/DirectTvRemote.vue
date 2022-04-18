@@ -48,7 +48,7 @@
       </Ch5button>
 
       <Ch5slider
-        id="100"
+        id="99"
         class="col-start-7 col-end-9 row-start-1 row-end-1 text-3xl justify-self-center"
       />
 
