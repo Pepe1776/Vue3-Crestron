@@ -166,7 +166,7 @@ h1 {
   background-color: rgba(11, 11, 11, 0);
   backdrop-filter: blur(10px);
   top: 20%;
-  right: 24%;
+  right: 4%;
   font-size: 2rem;
   transition: all 0.3s ease-in-out;
 }
@@ -200,6 +200,7 @@ h1 {
   border: 2px solid $primary;
   padding: 20px;
   border-radius: 10%;
+  width: 50%;
 
   transition: all 0.3s ease-in-out;
 }
