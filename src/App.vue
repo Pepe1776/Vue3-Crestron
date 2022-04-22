@@ -1,34 +1,60 @@
 <script>
 import DarkModeToggle from "./components/DarkModeToggle.vue";
+const date = new Date();
 export default {
   name: "app",
   data() {
     return {
       mode: "dark",
-      isDark: false,
+      isDark: true,
       isShow: false,
+      dateTime: {
+        hours: date.getHours(),
+        minutes: date.getMinutes(),
+        seconds: date.getSeconds(),
+      },
+      timer: undefined,
     };
   },
 
   components: {
     DarkModeToggle,
   },
+  methods: {
+    setDateTime() {
+      const date = new Date();
+      this.dateTime = {
+        hours: date.getHours(),
+        minutes: date.getMinutes(),
+        seconds: date.getSeconds(),
+      };
+    },
+  },
+  beforeMount() {
+    this.timer = setInterval(this.setDateTime, 1000);
+  },
+  beforeUnmount() {
+    clearInterval(this.timer);
+  },
 };
 </script>
 
 <template>
   <div class="app" :class="isDark ? 'dark' : ''">
-    <h1 class="text-8xl flex justify-center align-middle mt-5">Crestron</h1>
+    <div class="clock">
+      {{ dateTime.hours }}:{{ dateTime.minutes }}:{{ dateTime.seconds }}
+    </div>
+    <h1 class="text-9xl flex justify-center align-middle mt-5">Crestron</h1>
     <DarkModeToggle @click="isDark = !isDark" class="darktoggle" />
     <!-- <Nav :mode="mode" @toggle="toggle" /> -->
     <button @click="isShow = !isShow" class="drop_btn">Rooms</button>
     <div v-show="isShow" class="drop_outer">
       <div class="drop_menu flex flex-col">
         <button @click="isShow = !isShow" class="text-8xl drop_close">X</button>
-        <button class="m-10 text-9xl">Living Room</button>
-        <button class="m-10 text-9xl">Family Room</button>
-        <button class="m-10 text-9xl">Master Bed</button>
-        <button class="m-10 text-9xl">Landscape</button>
+        <button class="m-10 text-7xl">Living Room</button>
+        <button class="m-10 text-7xl">Family Room</button>
+        <button class="m-10 text-7xl">Master Bed</button>
+        <button class="m-10 text-7xl">Landscape</button>
       </div>
     </div>
   </div>
@@ -49,8 +75,10 @@ export default {
   font-size: 10px;
 }
 .app {
+  margin-top: -15px;
+  inset: 0;
   width: 100vw;
-  min-height: 100vh;
+  min-height: 101vh;
   background-color: $lightest;
   color: $darkest;
   transition: background 0.3s ease-in-out;
@@ -67,7 +95,15 @@ export default {
   color: $darkest;
 }
 h1 {
-  font-size: 7rem;
+  font-size: 8rem;
+  padding: 20px;
+}
+.clock {
+  margin-top: 10px;
+  position: absolute;
+  top: 2%;
+  left: 2%;
+  font-size: 4rem;
 }
 .darktoggle {
   position: fixed;
@@ -125,13 +161,13 @@ h1 {
 .drop_menu {
   position: absolute;
   border-radius: 10%;
-  height: 50%;
+  height: 100%;
   width: 50%;
   background-color: rgba(11, 11, 11, 0);
   backdrop-filter: blur(10px);
-  top: 30%;
+  top: 20%;
   right: 24%;
-  font-size: 4rem;
+  font-size: 2rem;
   transition: all 0.3s ease-in-out;
 }
 .drop_outer {
@@ -152,7 +188,7 @@ h1 {
   height: 20px;
   z-index: 1;
   position: absolute;
-  top: 30px;
+  top: 0;
   right: 60px;
 
   transition: all 0.3s ease-in-out;
@@ -161,5 +197,13 @@ h1 {
   display: inline-block;
   margin-top: 15%;
   font-size: 7rem;
+  border: 2px solid $primary;
+  padding: 20px;
+  border-radius: 10%;
+
+  transition: all 0.3s ease-in-out;
+}
+.drop_btn:hover {
+  border: 3px solid $lighter;
 }
 </style>
