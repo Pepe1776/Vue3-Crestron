@@ -44,7 +44,7 @@ export default {
     <div class="clock">
       {{ dateTime.hours }}:{{ dateTime.minutes }}:{{ dateTime.seconds }}
     </div>
-    <h1 class="text-9xl flex justify-center align-middle mt-5">Crestron</h1>
+    <h1 class="title flex justify-center align-middle mt-5">Crestron</h1>
     <DarkModeToggle @click="isDark = !isDark" class="darktoggle" />
     <!-- <Nav :mode="mode" @toggle="toggle" /> -->
     <button @click="isShow = !isShow" class="drop_btn">Rooms</button>
@@ -94,7 +94,7 @@ export default {
   text-align: center;
   color: $darkest;
 }
-h1 {
+.title {
   font-size: 8rem;
   padding: 20px;
 }
@@ -206,5 +206,37 @@ h1 {
 }
 .drop_btn:hover {
   border: 3px solid $lighter;
+}
+@media (max-width: 800px) {
+  .app {
+    margin: 0;
+  }
+  .drop_btn {
+    font-size: 5rem;
+    position: absolute;
+    top: 40%;
+    left: 40;
+    transform: translate(-50%, -50%);
+  }
+  .drop_close {
+    top: -25px;
+    right: 25px;
+  }
+  .drop_menu {
+    width: 100%;
+    height: 100%;
+    top: 20px;
+    right: 0;
+  }
+  .title {
+    font-size: 6rem;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .clock {
+    display: none;
+  }
 }
 </style>
