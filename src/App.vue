@@ -230,7 +230,7 @@ export default {
   .drop_menu {
     width: 100%;
     height: 100%;
-    top: 20px;
+    top: 0px;
     right: 0;
   }
   .title {
