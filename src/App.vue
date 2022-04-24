@@ -226,6 +226,8 @@ export default {
     transform: translate(-50%, -50%);
   }
   .drop_close {
+    z-index: 3;
+    margin-top: 5%;
   }
   .drop_menu {
     width: 100%;
