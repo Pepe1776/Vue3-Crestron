@@ -195,7 +195,7 @@ export default {
   height: 20px;
   z-index: 1;
   position: absolute;
-  top: 0;
+  top: 5%;
   right: 60px;
 
   transition: all 0.3s ease-in-out;
