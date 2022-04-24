@@ -51,10 +51,10 @@ export default {
     <div v-show="isShow" class="drop_outer">
       <div class="drop_menu flex flex-col">
         <button @click="isShow = !isShow" class="text-8xl drop_close">X</button>
-        <button class="m-10 text-7xl">Living Room</button>
-        <button class="m-10 text-7xl">Family Room</button>
-        <button class="m-10 text-7xl">Master Bed</button>
-        <button class="m-10 text-7xl">Landscape</button>
+        <button class="bb1 text-7xl">Living Room</button>
+        <button class="bb2 text-7xl">Family Room</button>
+        <button class="bb3 text-7xl">Master Bed</button>
+        <button class="bb4 text-7xl">Landscape</button>
       </div>
     </div>
   </div>
@@ -99,15 +99,15 @@ export default {
   padding: 20px;
 }
 .clock {
-  margin-top: 10px;
+  margin: 10px;
   position: absolute;
-  top: 2%;
-  left: 2%;
+  top: 5%;
+  left: 5%;
   font-size: 4rem;
 }
 .darktoggle {
   position: fixed;
-  top: 10px;
+  top: 40px;
   right: 0;
   z-index: 1;
   padding: 0px 15px;
@@ -158,6 +158,13 @@ export default {
   background: linear-gradient(145deg, #cacaca, #f0f0f0);
   box-shadow: 10px 10px 19px #b5b5b5, -10px -10px 19px #ffffff;
 }
+.bb1,
+.bb2,
+.bb3,
+.bb4 {
+  margin-top: 20%;
+}
+
 .drop_menu {
   position: absolute;
   border-radius: 10%;
@@ -165,7 +172,7 @@ export default {
   width: 50%;
   background-color: rgba(11, 11, 11, 0);
   backdrop-filter: blur(10px);
-  top: 20%;
+  top: 0%;
   right: 4%;
   font-size: 2rem;
   transition: all 0.3s ease-in-out;
@@ -219,8 +226,6 @@ export default {
     transform: translate(-50%, -50%);
   }
   .drop_close {
-    top: -25px;
-    right: 25px;
   }
   .drop_menu {
     width: 100%;
@@ -237,6 +242,12 @@ export default {
   }
   .clock {
     display: none;
+  }
+  .bb1,
+  .bb2,
+  .bb3,
+  .bb4 {
+    margin-top: 20%;
   }
 }
 </style>
