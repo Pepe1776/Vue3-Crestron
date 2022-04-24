@@ -226,13 +226,14 @@ export default {
     transform: translate(-50%, -50%);
   }
   .drop_close {
+    position: fixed;
     z-index: 3;
     margin-top: 5%;
   }
   .drop_menu {
     width: 100%;
     height: 100%;
-    top: 0px;
+    top: 5%;
     right: 0;
   }
   .title {
