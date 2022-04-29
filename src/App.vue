@@ -8,6 +8,7 @@ export default {
       mode: "dark",
       isDark: true,
       isShow: false,
+      isShowB: false,
       dateTime: {
         hours: date.getHours(),
         minutes: date.getMinutes(),
@@ -44,17 +45,30 @@ export default {
     <div class="clock">
       {{ dateTime.hours }}:{{ dateTime.minutes }}:{{ dateTime.seconds }}
     </div>
-    <h1 class="title flex justify-center align-middle mt-5 text-9xl">Crestron</h1>
+    <h1 class="title flex justify-center align-middle mt-5 text-9xl">
+      Crestron
+    </h1>
     <DarkModeToggle @click="isDark = !isDark" class="darktoggle" />
     <!-- <Nav :mode="mode" @toggle="toggle" /> -->
     <button @click="isShow = !isShow" class="drop_btn">Rooms</button>
     <div v-show="isShow" class="drop_outer">
       <div class="drop_menu flex flex-col">
         <button @click="isShow = !isShow" class="drop_close text-6xl">X</button>
-        <button class="bb1 text-7xl">Living Room</button>
+        <button @click="isShowB = !isShowB" class="bb1 text-7xl">
+          Living Room
+        </button>
         <button class="bb2 text-7xl">Family Room</button>
         <button class="bb3 text-7xl">Master Bed</button>
         <button class="bb4 text-7xl">Landscape</button>
+      </div>
+      <div v-show="isShowB" class="drop_menu flex flex-col">
+        <button @click="isShowB = !isShowB" class="drop_close text-6xl">
+          X
+        </button>
+        <button class="bb5 text-7xl">Direct Tv</button>
+        <button class="bb6 text-7xl">Apple Tv</button>
+        <button class="bb7 text-7xl">Roku</button>
+        <button class="bb8 text-7xl">X-Box</button>
       </div>
     </div>
   </div>
@@ -95,7 +109,6 @@ export default {
   color: $darkest;
 }
 .title {
-
   padding: 20px;
   opacity: 0.3;
 }
@@ -162,7 +175,11 @@ export default {
 .bb1,
 .bb2,
 .bb3,
-.bb4 {
+.bb4,
+.bb5,
+.bb6,
+.bb7,
+.bb8 {
   margin-top: 20%;
 }
 
@@ -170,7 +187,7 @@ export default {
   position: absolute;
   border-radius: 10%;
   height: 100%;
-  width: 50%;
+  width: 50vw;
   background-color: rgba(11, 11, 11, 0);
   backdrop-filter: blur(12px);
   top: 0%;
