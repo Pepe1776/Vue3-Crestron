@@ -171,7 +171,7 @@ export default {
   height: 100%;
   width: 50%;
   background-color: rgba(11, 11, 11, 0);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(12px);
   top: 0%;
   right: 4%;
   font-size: 2rem;
@@ -204,15 +204,16 @@ export default {
   display: inline-block;
   margin-top: 15%;
   font-size: 7rem;
-  border: 2px solid $primary;
+  box-shadow: $primary -5px 5px 15px 5px;
   padding: 20px;
   border-radius: 10%;
   width: 50%;
 
   transition: all 0.3s ease-in-out;
 }
-.drop_btn:hover {
-  border: 3px solid $lighter;
+.drop_btn:hover,
+.drop_btn:active {
+  box-shadow: $primary 0px 0px 15px 10px;
 }
 @media (max-width: 800px) {
   .app {
@@ -226,9 +227,7 @@ export default {
     transform: translate(-50%, -50%);
   }
   .drop_close {
-    position: fixed;
     z-index: 3;
-    margin-top: 5%;
   }
   .drop_menu {
     width: 100%;
@@ -242,6 +241,7 @@ export default {
     top: 15%;
     left: 50%;
     transform: translate(-50%, -50%);
+    opacity: 0.7;
   }
   .clock {
     display: none;
