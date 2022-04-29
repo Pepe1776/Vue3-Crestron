@@ -53,7 +53,7 @@ export default {
     <button @click="isShow = !isShow" class="drop_btn">Rooms</button>
     <div v-show="isShow" class="drop_outer">
       <div class="drop_menu flex flex-col">
-        <button @click="isShow = !isShow" class="drop_close text-6xl">X</button>
+        <button @click="isShow = !isShow" class="drop_close text-8xl">X</button>
         <button @click="isShowB = !isShowB" class="bb1 text-7xl">
           Living Room
         </button>
@@ -187,7 +187,7 @@ export default {
   position: absolute;
   border-radius: 10%;
   height: 100%;
-  width: 50vw;
+  width: 100vw;
   background-color: rgba(11, 11, 11, 0);
   backdrop-filter: blur(12px);
   top: 0%;
@@ -209,9 +209,6 @@ export default {
   transition: all 0.3s ease-in-out;
 }
 .drop_close {
-  width: 20px;
-  height: 20px;
-  z-index: 1;
   position: absolute;
   bottom: 13%;
   right: 60px;
@@ -245,10 +242,6 @@ export default {
     transform: translate(-50%, -50%);
   }
   .drop_close {
-    padding: 2px;
-    position: absolute;
-    z-index: 100;
-    margin: 0;
   }
   .drop_menu {
     width: 100%;
