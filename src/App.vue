@@ -45,10 +45,17 @@ export default {
     <div class="clock">
       {{ dateTime.hours }}:{{ dateTime.minutes }}:{{ dateTime.seconds }}
     </div>
-    <h1 class="title flex justify-center align-middle mt-5 text-9xl">
+    <h1
+      :class="isDark ? 'dark' : ''"
+      class="title flex justify-center align-middle mt-5 text-9xl"
+    >
       Crestron
     </h1>
-    <DarkModeToggle @click="isDark = !isDark" class="darktoggle" />
+    <DarkModeToggle
+      @click="isDark = !isDark"
+      class="darktoggle"
+      :class="isDark ? 'dark' : ''"
+    />
     <!-- <Nav :mode="mode" @toggle="toggle" /> -->
     <button @click="isShow = !isShow" class="drop_btn">Rooms</button>
     <div v-show="isShow" class="drop_outer">
@@ -62,7 +69,7 @@ export default {
         <button class="bb4 text-7xl">Landscape</button>
       </div>
       <div v-show="isShowB" class="drop_menu flex flex-col">
-        <button @click="isShowB = !isShowB" class="drop_close text-6xl">
+        <button @click="isShowB = !isShowB" class="drop_close text-8xl">
           X
         </button>
         <button class="bb5 text-7xl">Direct Tv</button>
@@ -240,8 +247,6 @@ export default {
     top: 40%;
     left: 40;
     transform: translate(-50%, -50%);
-  }
-  .drop_close {
   }
   .drop_menu {
     width: 100%;
