@@ -50,7 +50,7 @@ export default {
     <button @click="isShow = !isShow" class="drop_btn">Rooms</button>
     <div v-show="isShow" class="drop_outer">
       <div class="drop_menu flex flex-col">
-        <button @click="isShow = !isShow" class="text-8xl drop_close">X</button>
+        <button @click="isShow = !isShow" class="drop_close text-5xl">X</button>
         <button class="bb1 text-7xl">Living Room</button>
         <button class="bb2 text-7xl">Family Room</button>
         <button class="bb3 text-7xl">Master Bed</button>
