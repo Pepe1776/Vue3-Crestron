@@ -10,6 +10,12 @@
     >
       Crestron
     </h1>
+    <h6
+      :class="isDark ? 'dark' : 'light'"
+      class="title2 flex justify-center align-middle"
+    >
+      from Aevio
+    </h6>
     <DarkModeToggle
       @click="isDark = !isDark"
       class="darktoggle"
@@ -131,6 +137,10 @@ export default {
   color: $darkest;
 }
 .title {
+  padding: 20px;
+  opacity: 0.3;
+}
+.title2 {
   padding: 20px;
   opacity: 0.3;
 }
@@ -291,6 +301,14 @@ export default {
     top: 15%;
     left: 50%;
     transform: translate(-50%, -50%);
+  }
+  .title2 {
+    position: absolute;
+    top: 19%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: transparent;
+    font-size: 2rem;
   }
   .clock {
     display: none;
