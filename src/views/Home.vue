@@ -76,7 +76,7 @@ export default {
   data() {
     return {
       mode: "dark",
-      isDark: true,
+      isDark: false,
       isShow: false,
       isShow2: false,
       isShow3: false,
@@ -212,7 +212,8 @@ export default {
 .bb6,
 .bb7,
 .bb8 {
-  margin-top: 20%;
+  margin-top: 30%;
+  padding: 10px;
 }
 
 .drop_menu {
