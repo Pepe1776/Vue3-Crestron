@@ -7,6 +7,7 @@
 <style lang="scss">
 @import "./Sass/abstracts.scss";
 
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Nixie+One&family=Poiret+One&display=swap");
 @font-face {
   font-family: "Aquire";
   src: url(./assets/AquireLight-YzE0o.otf);

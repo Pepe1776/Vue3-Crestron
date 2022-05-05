@@ -130,7 +130,7 @@ export default {
   color: $dark;
 }
 #app {
-  font-family: "Aquire", Helvetica, Arial, sans-serif;
+  font-family: "Poiret One", cursive;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
