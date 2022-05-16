@@ -1,5 +1,6 @@
 <template>
   <input
+    :class="isDark ? 'dark' : 'light'"
     type="range"
     min="1"
     max="65535"
@@ -10,8 +11,18 @@
 </template>
 
 <style scoped>
+@import "../Sass/abstracts.scss";
 input {
-  width: 200px;
+  width: 85%;
+}
+
+.dark {
+  background-color: $darker;
+  color: $primary;
+}
+.light {
+  background-color: $lightest;
+  color: $dark;
 }
 input::-webkit-slider-thumb {
   -webkit-appearance: none;
@@ -56,7 +67,7 @@ input::-webkit-slider-runnable-track {
   height: 8.4px;
   cursor: pointer;
   box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-  background: rgb(0, 195, 255);
+  background: #26d0fa;
   border-radius: 1.3px;
   border: 0.2px solid #010101;
 }

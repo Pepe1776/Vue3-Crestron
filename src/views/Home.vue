@@ -21,10 +21,39 @@
       class="darktoggle"
       :class="isDark ? 'dark' : 'light'"
     />
-    <!-- <Nav :mode="mode" @toggle="toggle" /> -->
-    <button @click="isShow = !isShow" class="drop_btn">Rooms</button>
-    <button @click="isShow2 = !isShow2" class="drop_btn2">Scenes</button>
-    <button @click="isShow3 = !isShow3" class="drop_btn3">Security</button>
+    <!-- sliders -->
+    <div class="sliders" :class="isDark ? 'dark' : 'light'">
+      <Ch5slider class="slider-vol" />
+      <div :class="isDark ? 'dark' : 'light'" class="slider-vol-label mt-10">
+        Volume
+      </div>
+      <Ch5slider class="slider-lts mt-10" />
+      <div :class="isDark ? 'dark' : 'light'" class="slider-lts-label mt-10">
+        Lights
+      </div>
+    </div>
+    <!-- open tv remote -->
+    <div class="open-tv" :class="isDark ? 'dark' : 'light'">
+      <button class="open-tv-btn">Open TV Remote</button>
+    </div>
+
+    <!-- bottom Nav bar -->
+    <div class="bottom-nav" :class="isDark ? 'dark' : 'light'">
+      <div class="tv-base" :class="isDark ? 'dark' : 'light'">
+        <ToggleBasic class="toggle-tv" />
+        <div :class="isDark ? 'dark' : 'light'" class="drop_btn">TV</div>
+      </div>
+      <div class="lights-base" :class="isDark ? 'dark' : 'light'">
+        <ToggleBasic class="toggle-lights" />
+        <div :class="isDark ? 'dark' : 'light'" class="drop_btn2">Lights</div>
+      </div>
+      <div class="music-base" :class="isDark ? 'dark' : 'light'">
+        <ToggleBasic class="toggle-music" />
+        <div :class="isDark ? 'dark' : 'light'" class="drop_btn3">Music</div>
+      </div>
+    </div>
+
+    <!-- modal start -->
     <div v-show="isShow" class="drop_outer">
       <div class="drop_menu flex flex-col">
         <button @click="isShow = !isShow" class="drop_close text-8xl">X</button>
@@ -69,6 +98,8 @@
 </template>
 
 <script>
+import Ch5slider from "../components/Ch5slider.vue";
+import ToggleBasic from "../components/ToggleBasic.vue";
 import DarkModeToggle from "../components/DarkModeToggle.vue";
 const date = new Date();
 export default {
@@ -92,6 +123,8 @@ export default {
 
   components: {
     DarkModeToggle,
+    ToggleBasic,
+    Ch5slider,
   },
   methods: {
     setDateTime() {
@@ -251,16 +284,77 @@ export default {
 .drop_btn,
 .drop_btn2,
 .drop_btn3 {
+  margin-top: 60%;
+}
+.sliders {
+  position: absolute;
+  top: 30%;
+  right: 7%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 25%;
+  width: 90%;
+  font-size: 3rem;
+}
+.sliders > div {
+  font-size: 3rem;
+}
+.open-tv {
+  position: absolute;
+  top: 56%;
+  right: 7%;
+  width: 90%;
+  font-size: 3rem;
+  box-shadow: $primary 0px 5px 10px;
+  border-radius: 5%;
+  border: $primary 1px solid;
+}
+
+.tv-base,
+.lights-base,
+.music-base {
   display: inline-block;
   margin-top: 1%;
-  font-size: 7rem;
+  font-size: 4rem;
   box-shadow: $primary -5px 5px 15px 5px;
-  padding: 20px;
+  padding: 5px;
   border-radius: 10%;
-  width: auto;
-
+  width: 27%;
+  height: 15vh;
+  align-items: end;
   transition: all 0.3s ease-in-out;
 }
+
+.bottom-nav {
+  position: fixed;
+  top: 65%;
+  left: -2%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100vw;
+}
+.toggle-tv {
+  position: absolute;
+  top: 0;
+  left: 12%;
+  background-color: transparent;
+}
+.toggle-lights {
+  position: absolute;
+  top: 0;
+  left: 44%;
+  background-color: transparent;
+}
+.toggle-music {
+  position: absolute;
+  top: 0;
+  left: 75%;
+  background-color: transparent;
+}
+
 .drop_btn:hover,
 .drop_btn:active {
   box-shadow: $primary 0px 0px 15px 10px;
@@ -270,25 +364,13 @@ export default {
     margin: 0;
   }
   .drop_btn {
-    font-size: 5rem;
-    position: absolute;
-    top: 40%;
-    left: 40;
-    transform: translate(-50%, -50%);
+    font-size: 3rem;
   }
   .drop_btn2 {
-    font-size: 5rem;
-    position: absolute;
-    top: 60%;
-    left: 40;
-    transform: translate(-50%, -50%);
+    font-size: 3rem;
   }
   .drop_btn3 {
-    font-size: 5rem;
-    position: absolute;
-    top: 80%;
-    left: 40;
-    transform: translate(-50%, -50%);
+    font-size: 3rem;
   }
   .drop_menu {
     width: 100%;
@@ -299,13 +381,13 @@ export default {
   .title {
     font-size: 5rem;
     position: absolute;
-    top: 15%;
+    top: 85%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
   .title2 {
     position: absolute;
-    top: 19%;
+    top: 88%;
     left: 50%;
     transform: translate(-50%, -50%);
     background: transparent;
