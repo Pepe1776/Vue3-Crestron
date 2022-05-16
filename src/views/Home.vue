@@ -328,7 +328,7 @@ export default {
 }
 
 .bottom-nav {
-  position: fixed;
+  position: absolute;
   top: 65%;
   left: -2%;
   display: flex;
