@@ -34,6 +34,7 @@
     <!-- sliders -->
     <div class="sliders" :class="isDark ? 'dark' : 'light'">
       <slider
+      
         color="#189aba"
         tooltip="true"
         v-model="myNumber"
@@ -362,8 +363,8 @@ export default {
 }
 .dial-text {
   position: absolute;
-  top: 22%;
-  left: 40%;
+  top: 24%;
+  left: 39%;
   border-radius: 50%;
   color: $primary;
   font-size: 3rem;
@@ -373,6 +374,7 @@ export default {
   justify-content: center;
   align-items: center;
   transition: all 0.3s ease-in-out;
+  background: transparent;
 }
 .sliders {
   position: absolute;
@@ -471,13 +473,13 @@ export default {
   .title {
     font-size: 5rem;
     position: absolute;
-    top: 96%;
+    top: 104%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
   .title2 {
     position: absolute;
-    top: 99%;
+    top: 107%;
     left: 50%;
     transform: translate(-50%, -50%);
     background: transparent;
