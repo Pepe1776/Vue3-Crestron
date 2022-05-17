@@ -362,6 +362,7 @@ export default {
 @media (max-width: 800px) {
   .app {
     margin: 0;
+    height: 100vh;
   }
   .drop_btn {
     font-size: 3rem;
