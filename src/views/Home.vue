@@ -21,6 +21,12 @@
       class="darktoggle"
       :class="isDark ? 'dark' : 'light'"
     />
+    <!-- Dial -->
+    <div class="dial" :class="isDark ? 'dark' : 'light'">
+      <div class="dial-bg"></div>
+      <div class="dial-text">Volume</div>
+      <div class="dial-num">{{ this.value }}</div>
+    </div>
     <!-- sliders -->
     <div class="sliders" :class="isDark ? 'dark' : 'light'">
       <Ch5slider class="slider-vol" />
@@ -286,6 +292,22 @@ export default {
 .drop_btn3 {
   margin-top: 60%;
 }
+.dial-bg {
+  position: absolute;
+  top: 5%;
+  left: 17%;
+  width: 275px;
+  height: 275px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.662);
+  box-shadow: $primary 0px 5px 10px;
+  border: $primary 1px solid;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
 .sliders {
   position: absolute;
   top: 36%;
@@ -362,7 +384,8 @@ export default {
 @media (max-width: 800px) {
   .app {
     margin: 0;
-    height: 100vh;
+    width: 100%;
+    height: min-content;
   }
   .drop_btn {
     font-size: 3rem;
