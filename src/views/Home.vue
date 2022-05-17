@@ -288,8 +288,8 @@ export default {
 }
 .sliders {
   position: absolute;
-  top: 30%;
-  right: 6%;
+  top: 36%;
+  right: 5%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -303,12 +303,12 @@ export default {
 }
 .open-tv {
   position: absolute;
-  top: 56%;
+  top: 63%;
   right: 6%;
   width: 90%;
   font-size: 3rem;
   box-shadow: $primary 0px 5px 10px;
-  border-radius: 5%;
+  border-radius: 7%;
   border: $primary 1px solid;
 }
 
@@ -329,8 +329,8 @@ export default {
 
 .bottom-nav {
   position: absolute;
-  top: 65%;
-  left: -1%;
+  top: 73%;
+  left: 0%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -381,13 +381,13 @@ export default {
   .title {
     font-size: 5rem;
     position: absolute;
-    top: 88%;
+    top: 93%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
   .title2 {
     position: absolute;
-    top: 91%;
+    top: 96%;
     left: 50%;
     transform: translate(-50%, -50%);
     background: transparent;
