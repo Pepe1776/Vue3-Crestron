@@ -23,17 +23,26 @@
     />
     <!-- Dial -->
     <div class="dial" :class="isDark ? 'dark' : 'light'">
-      <div class="dial-bg"></div>
-      <div class="dial-text">Volume</div>
-      <div class="dial-num">{{ this.value }}</div>
+      <div :class="isDark ? 'dark' : 'light'" class="dial-bg"></div>
+      <div :class="isDark ? 'dark' : 'light'" class="dial-text">Volume</div>
+      <div :class="isDark ? 'dark' : 'light'" class="dial-num">
+        {{ myNumber }}
+      </div>
+      <div :class="isDark ? 'dark' : 'light'" class="dial-num dial-num2">0</div>
+      <div :class="isDark ? 'dark' : 'light'" class="dial-per">%</div>
     </div>
     <!-- sliders -->
     <div class="sliders" :class="isDark ? 'dark' : 'light'">
-      <Ch5slider class="slider-vol" />
+      <slider
+        color="#189aba"
+        tooltip="true"
+        v-model="myNumber"
+        class="slider-vol"
+      />
       <div :class="isDark ? 'dark' : 'light'" class="slider-vol-label mt-10">
         Volume
       </div>
-      <Ch5slider class="slider-lts mt-10" />
+      <slider color="#189aba" tooltip="true" class="slider-lts mt-10" />
       <div :class="isDark ? 'dark' : 'light'" class="slider-lts-label mt-10">
         Lights
       </div>
@@ -104,10 +113,12 @@
 </template>
 
 <script>
-import Ch5slider from "../components/Ch5slider.vue";
+import slider from "vue3-slider";
 import ToggleBasic from "../components/ToggleBasic.vue";
 import DarkModeToggle from "../components/DarkModeToggle.vue";
 const date = new Date();
+const myNumber = new Number(0);
+console.log(myNumber);
 export default {
   name: "app",
   data() {
@@ -130,7 +141,7 @@ export default {
   components: {
     DarkModeToggle,
     ToggleBasic,
-    Ch5slider,
+    slider,
   },
   methods: {
     setDateTime() {
@@ -174,6 +185,12 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: $darkest;
+}
+.app{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .title {
   padding: 20px;
@@ -299,10 +316,45 @@ export default {
   width: 275px;
   height: 275px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.662);
+  background: rgba(255, 255, 255, 0);
   box-shadow: $primary 0px 5px 10px;
   border: $primary 1px solid;
   z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+.dial-num {
+  position: absolute;
+  top: 15%;
+  left: 44%;
+  border-radius: 50%;
+  color: $primary;
+  font-size: 5rem;
+  text-shadow: $primary 0px 5px 10px;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+.dial-num2 {
+  z-index: 2;
+  position: absolute;
+  top: 15%;
+  left: 40%;
+  display: none;
+}
+.dial-per {
+  position: absolute;
+  top: 14%;
+  left: 66%;
+  border-radius: 50%;
+  color: $primary;
+  font-size: 3rem;
+  text-shadow: $primary 0px 5px 10px;
+  z-index: 3;
   display: flex;
   justify-content: center;
   align-items: center;

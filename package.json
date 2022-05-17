@@ -19,7 +19,7 @@
     "vue": "^3.0.0",
     "vue-iframes": "^0.0.19",
     "vue-router": "^4.0.0-0",
-    "vue3-slider": "^1.6.8",
+    "vue3-slider": "^1.6.9",
     "vuex": "^4.0.0-0"
   },
   "devDependencies": {
