@@ -360,9 +360,23 @@ export default {
   align-items: center;
   transition: all 0.3s ease-in-out;
 }
+.dial-text {
+  position: absolute;
+  top: 22%;
+  left: 40%;
+  border-radius: 50%;
+  color: $primary;
+  font-size: 3rem;
+  text-shadow: $primary 0px 5px 10px;
+  z-index: 4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
 .sliders {
   position: absolute;
-  top: 36%;
+  top: 46%;
   right: 5%;
   display: flex;
   flex-direction: column;
@@ -377,7 +391,7 @@ export default {
 }
 .open-tv {
   position: absolute;
-  top: 63%;
+  top: 70%;
   right: 6%;
   width: 90%;
   font-size: 3rem;
@@ -403,7 +417,7 @@ export default {
 
 .bottom-nav {
   position: absolute;
-  top: 73%;
+  top: 79%;
   left: 0%;
   display: flex;
   justify-content: space-evenly;
@@ -457,13 +471,13 @@ export default {
   .title {
     font-size: 5rem;
     position: absolute;
-    top: 93%;
+    top: 96%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
   .title2 {
     position: absolute;
-    top: 96%;
+    top: 99%;
     left: 50%;
     transform: translate(-50%, -50%);
     background: transparent;
