@@ -209,7 +209,7 @@ export default {
   font-size: 4rem;
 }
 .darktoggle {
-  position: fixed;
+  position: absolute;
   top: 20px;
   right: 0;
   z-index: 1;
@@ -329,7 +329,7 @@ export default {
 .dial-num {
   position: absolute;
   top: 15%;
-  left: 44%;
+  left: 43%;
   border-radius: 50%;
   color: $primary;
   font-size: 5rem;
